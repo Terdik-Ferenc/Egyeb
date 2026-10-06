@@ -1,0 +1,2 @@
+# Egyeb
+Segédlet
