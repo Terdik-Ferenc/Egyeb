@@ -1,5 +1,6 @@
 # Egyeb
 Segédlet
+"""
 CSS..
 .class_elem{
 width: 500px;
@@ -45,6 +46,7 @@ CSS 2...
       font-size: 2.0em;
       text-align: center;
 }
+"""
 Segédlet:
     internal class Feladat
     {
@@ -97,3 +99,38 @@ Segédlet:
             }
 
         }
+---------------------------map
+		function UserList() {
+  const users = [
+    { id: 'u1', name: 'Anna' },
+    { id: 'u2', name: 'Péter' },
+    { id: 'u3', name: 'Kata' }
+  ];
+
+  return (
+    <ul>
+      {users.map(user => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+}
+------------------komp
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+      <h2>Számláló Komponens</h2>
+      <p>A gombot eddig <strong>{count}</strong> alkalommal nyomtad meg.</p>
+      <button onClick={() => setCount(count + 1)}>
+        Kattints ide!
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+-----------------------------------
