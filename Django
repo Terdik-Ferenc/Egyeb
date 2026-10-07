@@ -1,0 +1,55 @@
+```
+parancssorban:
+code .
+
+Virtuális környezet:
+py -m venv .
+
+Aktiválás:
+Scripts\activate
+
+Django telepítése:
+pip install django
+
+Django projekt létrehozása:
+django-admin  startproject config
+
+A külső config mappa átnevezése backend -re.
+
+Django app létrehozássa (a backend mappán belül)
+py manage.py startapp weather
+
+Adatok migrálása:
+py manage.py migrate
+
+Szerver indítása:
+py manage.py runserver
+
+Admin létrehozása:
+py manage.py createsuperuser
+
+CRUD: Create, read, update, delete
+MVC: Model (adatbázis), view (django függvények), controller (django template-django html oldalak)
+
+URL: Backend logikai URL-ek vannak, nem az elem tényleges helye van megadva, hanem mi adjuk meg.
+
+Kaszkádolt törlés: Ha az egyik táblából törlünk egy adatot (pl. várost), akkor a hozzá kapcsolódó másik táblából is törlődnek a hozzá tartozó adatok.
+
+Adatmigráció előkészítése:
+py manage.py makemigrations
+
+Adatmodell regisztrálása:
+admin.site.register(modell_neve)
+
+az oldal  hordozhatósága:
+-pip freeze
+kilistázza az aktuális Python környezetben telepített csomagokat és azok pontos verzióit, majd a a tartalmát bemásolni a requirements.txt-be (backend és a requirements-en kívül mindent lehet törölni)
+
+az új helyen :
+-felmásoljuk a backend és a requrements.txt
+-virtuális környezetet létre kell hozni (py -m venv .)
+-aktiváljuk a scriptet (scripts\activate)
+-újra építjük a környezetet (pip install -r requirements.txt)
+
+
+```
