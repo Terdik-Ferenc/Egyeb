@@ -1,7 +1,8 @@
 # Egyeb
 Segédlet
-"""
+
 CSS..
+"""
 .class_elem{
 width: 500px;
 padding-top: 1em;
@@ -27,7 +28,9 @@ height: 200px;
 .class_elem:nth-of-type(odd) > img{
     float:right;
 }
+"""
 CSS 2...
+"""
 #velemid{
     display: flex;
 	flex-direction: row;
@@ -66,12 +69,12 @@ Segédlet:
                 adatok.Add(new(cim,nev,nemzetiseg,szulEv,halEv,helyezes));
             }
         }
-        public void Feladat4()
+        public void F4()
         {
             Console.WriteLine($"4. Feladat: A könyvek száma: {adatok.Count} db");
         }
 
-        public void Feladat5()
+        public void F5()
         {
             Console.WriteLine("5. Feladat: A még élő szerzők művei: ");
 
@@ -83,7 +86,7 @@ Segédlet:
 
 
         }
-        public void Feladat7()
+        public void F7()
         {
             Console.Write("7. feladat: Kérem a szerző nemzetiségét: ");
             var bekertNemzet = Console.ReadLine();
@@ -100,6 +103,7 @@ Segédlet:
 
         }
 ---------------------------map
+"""
 		function UserList() {
   const users = [
     { id: 'u1', name: 'Anna' },
@@ -115,7 +119,9 @@ Segédlet:
     </ul>
   );
 }
-------------------komp
+"""
+------------------komponens minta
+"""
 import { useState } from 'react';
 
 function Counter() {
@@ -133,4 +139,51 @@ function Counter() {
 }
 
 export default Counter;
------------------------------------
+"""
+-----------------------------------lekérés """  """
+C# lekeres minta
+"""
+private void btn.Click(....)
+{
+    VersenyAdat valasztott = eredmenyTabla.SelectedItem as VersenyAdat;
+    string szoveg = $"""
+        SELECT Csucs
+        FROM versenyekszamok
+        WHERE Versenyzonev='{valasztott.Nev}'
+        """;
+    MysqlCommand command = new(szoveg, command);
+    MysqlDataReader reader = command.ExecuteReader();
+    reader.Read();
+    LabelNev.Content = reader.GetString(0);
+    reader.Close();    
+}
+"""
+C# beolvasas
+"""
+public mainWindow()
+{
+    init.....
+    connection = new(ConnectionString);
+    connection.Open();
+    Beolvas();
+}
+public void Beolvas()
+{
+    adatok = [];
+    string szoveg = """
+        SELECT Versenyszam, VersenyzoNev, stb
+        FROM versenyszamok 
+        INNER JOIN nemzetek 
+        ON versenyszamok.nemzetkod=nemzetek.nemzetId
+        """;
+ MysqlCommand command = new(szoveg, connection);
+ MysqlDataReader reader = command.ExecuteReader();
+ while(reader.Read())
+ {
+    adatok.Add(new(reader));
+ }
+reader.Close(); 
+eredmenyTabla.ItemSource = adatok;
+
+}
+"""
