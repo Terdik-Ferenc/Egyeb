@@ -2,7 +2,7 @@
 Segédlet
 
 CSS..
-"""
+```
 .class_elem{
 width: 500px;
 padding-top: 1em;
@@ -28,9 +28,9 @@ height: 200px;
 .class_elem:nth-of-type(odd) > img{
     float:right;
 }
-"""
+```
 CSS 2...
-"""
+```
 #velemid{
     display: flex;
 	flex-direction: row;
@@ -49,7 +49,7 @@ CSS 2...
       font-size: 2.0em;
       text-align: center;
 }
-"""
+```
 Segédlet:
     internal class Feladat
     {
@@ -103,7 +103,7 @@ Segédlet:
 
         }
 ---------------------------map
-"""
+```
 		function UserList() {
   const users = [
     { id: 'u1', name: 'Anna' },
@@ -119,9 +119,9 @@ Segédlet:
     </ul>
   );
 }
-"""
+```
 ------------------komponens minta
-"""
+```
 import { useState } from 'react';
 
 function Counter() {
@@ -139,10 +139,10 @@ function Counter() {
 }
 
 export default Counter;
-"""
+```
 -----------------------------------lekérés """  """
 C# lekeres minta
-"""
+```
 private void btn.Click(....)
 {
     VersenyAdat valasztott = eredmenyTabla.SelectedItem as VersenyAdat;
@@ -157,9 +157,9 @@ private void btn.Click(....)
     LabelNev.Content = reader.GetString(0);
     reader.Close();    
 }
-"""
+```
 C# beolvasas
-"""
+```
 public mainWindow()
 {
     init.....
@@ -184,6 +184,7 @@ public void Beolvas()
  }
 reader.Close(); 
 eredmenyTabla.ItemSource = adatok;
+```
 
 }
 """
